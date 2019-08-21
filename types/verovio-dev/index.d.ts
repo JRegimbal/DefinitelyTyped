@@ -1,39 +1,30 @@
 // Type definitions for verovio-dev 2.2
 // Project: http://www.verovio.org
-// Definitions by: Juliette Regimbal <https://github.com/me>
+// Definitions by: Juliette Regimbal <https://github.com/JRegimbal>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-/*~ If this module is a UMD module that exposes a global variable 'myLib' when
- *~ loaded outside a module loader environment, declare that global here.
- *~ Otherwise, delete this declaration.
- */
-export as namespace myLib;
-
-/*~ If this module has methods, declare them as functions like so.
- */
-export function myMethod(a: string): string;
-export function myOtherMethod(a: number): number;
-
-/*~ You can declare types that are available via importing the module */
-export interface someType {
-    name: string;
-    length: number;
-    extras?: string[];
-}
-
-/*~ You can declare properties of the module using const, let, or var */
-export const myField: number;
-
-/*~ If there are types, properties, or methods inside dotted names
- *~ of the module, declare them inside a 'namespace'.
- */
-export namespace subProp {
-    /*~ For example, given this definition, someone could write:
-     *~   import { subProp } from 'yourModule';
-     *~   subProp.foo();
-     *~ or
-     *~   import * as yourMod from 'yourModule';
-     *~   yourMod.subProp.foo();
-     */
-    function foo(): void;
+declare class vrvToolkit {
+  constructor();
+  destructor(ptr: number): void;
+  edit(ptr: number, editorAction: string): boolean;
+  getAvailableOptions(ptr: number): string;
+  getElementAttr(ptr: number, xmlId: string): string;
+  getElementsAtTime(ptr: number, millisec: number): string;
+  getHumdrum(ptr: number): string;
+  getLog(ptr: number): string;
+  getMEI(ptr: number, page_no: number, score_based: boolean): string;
+  getMIDIValuesForElement(ptr: number, xmlId: string): string;
+  getOptions(ptr: number, default_values: boolean): string;
+  getPageCount(ptr: number): number;
+  getPageWithElement(ptr: number, xmlId: string): number;
+  getTimeForElement(ptr: number, xmlId: string): number;
+  getVersion(ptr: number): string;
+  loadData(ptr: number, data: string): boolean;
+  renderToMIDI(ptr: number, c_options: string): string;
+  renderToSVG(ptr: number, page_no: number, c_options: string): string;
+  renderToTimemap(ptr: number): string;
+  redoLayout(ptr: number): void;
+  redoPagePitchPosLayout(ptr: number): void;
+  renderData(ptr: number, data: string, options: string): string;
+  setOptions(ptr: number, options: string): void;
 }
