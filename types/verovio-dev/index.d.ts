@@ -4,12 +4,12 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.2
 
-declare type EditorAction = {
+interface EditorAction {
   action: string;
   param: object | EditorAction[];
-};
+}
 
-declare type GeneralVerovioOptions = {
+interface GeneralVerovioOptions {
   // General
   adjustPageHeight: boolean;
   breaks: string;
@@ -36,9 +36,9 @@ declare type GeneralVerovioOptions = {
   useFacsimile: boolean;
   usePgFooterForAll: boolean;
   usePgHeaderForAll: boolean;
-};
+}
 
-declare type GeneralLayoutVerovioOptions = {
+interface GeneralLayoutVerovioOptions {
   // General Layout
   barLineWidth: number;
   beamMaxSlope: number;
@@ -71,16 +71,16 @@ declare type GeneralLayoutVerovioOptions = {
   staffLineWidth: number;
   stemWidth: number;
   tieThickness: number;
-};
+}
 
-declare type SelectorsVerovioOptions = {
+interface SelectorsVerovioOptions {
   appXPathQuery: string[];
   choiceXPathQuery: string[];
   mdivXPathQuery: string;
   substXPathQuery: string[];
-};
+}
 
-declare type ElementMarginsVerovioOptions = {
+interface ElementMarginsVerovioOptions {
   defaultBottomMargin: number;
   defaultLeftMargin: number;
   defaultRightMargin: number;
@@ -90,7 +90,7 @@ declare type ElementMarginsVerovioOptions = {
   leftMarginBarLine: number;
   leftMarginBeatRpt: number;
   leftMarginChord: number;
-  leftMarginClef:  number;
+  leftMarginClef: number;
   leftMarginKeySig: number;
   leftMarginLeftBarLine: number;
   leftMarginMensur: number;
@@ -119,9 +119,9 @@ declare type ElementMarginsVerovioOptions = {
   rightMarginRest: number;
   rightMarginRightBarLine: number;
   topMarginHarm: number;
-};
+}
 
-declare type VerovioOptions = GeneralVerovioOptions & GeneralLayoutVerovioOptions & SelectorsVerovioOptions & ElementMarginsVerovioOptions;
+type VerovioOptions = GeneralVerovioOptions & GeneralLayoutVerovioOptions & SelectorsVerovioOptions & ElementMarginsVerovioOptions;
 
 declare class toolkit {
   constructor();
