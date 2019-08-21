@@ -14,7 +14,7 @@ interface GeneralVerovioOptions {
   adjustPageHeight: boolean;
   breaks: string;
   evenNoteSpacing: boolean;
-  humtype: boolean;
+  humType: boolean;
   landscape: boolean;
   mensuralToMeasure: boolean;
   midiTempoAdjustment: number;
