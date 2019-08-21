@@ -38,7 +38,7 @@ declare const verovio: {
     new (): toolkit;
   };
   vrvToolkit: {
-    constructor(): number;
+    constructor: () => number;
     destructor(ptr: number): void;
     edit(ptr: number, editorAction: object): boolean;
     getAvailableOptions(ptr: number): string;
