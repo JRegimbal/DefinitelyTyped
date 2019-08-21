@@ -2,6 +2,7 @@
 // Project: http://www.verovio.org
 // Definitions by: Juliette Regimbal <https://github.com/JRegimbal>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
+// TypeScript Version: 2.2
 
 declare class toolkit {
   constructor();
